@@ -28,4 +28,60 @@ Contents:
    - Use board switches for dir and rst (or wire to external switches).
    - Observe LEDs (if present) before connecting motor.
    - Start with low speed (adjust clk divider MSB) and verify motion.
+     
+# FPGA FLOW (Xilinx Spartan-6, ISE)- #
+1. Design Entry
 
+Write RTL (.v / .vhd)
+
+Constraints (.ucf)
+
+IP cores (.xco, wrapper .v/.vhd)
+
+2. Simulation
+
+Functional sim before synthesis
+
+Files: .wdb/.wcfg (ISim), .vcd (wave dumps)
+
+3. Synthesis (XST)
+
+RTL → netlist of LUTs, FFs, DSPs
+
+Files: .ngc (netlist), .syr (synth report), .ncf
+
+4. Translate (ngdbuild)
+
+Merges design + constraints
+
+Files: .ngd (merged netlist), .bld (log)
+
+5. Map
+
+Maps logic onto FPGA resources
+
+Files: .ncd (mapped), .pcf (physical constraints), .mrp (map report)
+
+6. Place & Route (par)
+
+Places logic, routes interconnects
+
+Files: .ncd (final routed), .par (log)
+
+7. Timing Analysis (trce)
+
+Checks setup/hold
+
+Files: .twr (timing report), .twx (summary)
+
+8. Bitstream Generation (bitgen)
+
+Creates configuration file
+
+Files: .bit (JTAG), .rbt / .svf
+
+9. PROM Generation (promgen/iMPACT)
+
+For non-volatile config
+
+Files: .mcs (SPI flash image), .log
