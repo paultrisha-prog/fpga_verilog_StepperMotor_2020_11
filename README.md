@@ -5,7 +5,7 @@ Contents:
 - /src: VHDL sources (full-step and half-step) and UCF constraints.
 - /images: Block flow, hardware setup and timing diagrams (auto-generated).
   
-  ---Setup instructions and how to program the board---
+### ---Setup instructions and how to program the board--- ###
 # Setup & How-to (Spartan-6 + PM20S)
 
 1. Files you need
