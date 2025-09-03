@@ -2,8 +2,8 @@
 This repository contains a compact FPGA-based stepper motor controller project targeting Spartan-6 (XC6SLX9) and the PM20S 4-phase unipolar stepper motor from a lab kit.
 
 Contents:
-- /src: VHDL sources (full-step and half-step) and UCF constraints.
-- /images: Block flow, hardware setup and timing diagrams (auto-generated).
+-  VHDL sources (full-step and half-step) and UCF constraints.
+- images: Torue Control Sequence, hardware setup and timing diagrams.
   
 ### ---Setup instructions and how to program the board--- ###
 # Setup & How-to (Spartan-6 + PM20S)
