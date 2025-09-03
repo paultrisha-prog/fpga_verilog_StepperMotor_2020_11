@@ -1,0 +1,7 @@
+NET "a1b1a2b2[0]" LOC = P40;
+NET "a1b1a2b2[1]" LOC = P41;
+NET "a1b1a2b2[2]" LOC = P43;
+NET "a1b1a2b2[3]" LOC = P44;
+NET "dir" LOC = P2;
+NET "clk" LOC = P15;
+NET "rst" LOC = P5;
